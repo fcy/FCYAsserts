@@ -8,9 +8,16 @@ that if something is wrong it should break ASAP.
 
 # Installation
 
+## Using CocoaPods
+
 In your Podfile add this line:
 
 `pod 'FCYAsserts'`
+
+## Old School
+
+Just add the files in `FCYAsserts` and import `FCYAsserts.h` in your prefix 
+header (`*.pch`) or directly in each `.m` you want.
 
 # Usage
 
