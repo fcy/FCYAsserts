@@ -32,7 +32,7 @@
         description = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
     }
-    FCYAssertLog(@"Asserting failure: '%@' in '%@' on line %@:%ld. %@", expression, function, file, (long)line, description);
+    FCYAssertLog(@"%@: Assertion '%@' failed on line %@:%ld. %@", function, expression, file, (long)line, description);
     abort();
 }
 

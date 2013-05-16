@@ -24,17 +24,24 @@ header (`*.pch`) or directly in each `.m` you want.
 The usage is exactly like NSAssert the difference is that the log is more complete.
 
 ```
+// AppDelegate.m
+
 #import "FCYAsserts.h"
-int main(int argc, char *argv[]) {
-	@autoreleasepool {
-		FCYAssert(1 > 2, @"This is just a silly example %@", @"or not");
-	}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self startLengthyOperation];
+    // ...
+}
+
+- (void)startLengthyOperation {
+    FCYAssertIsNotInMainThread;
+    // ...
 }
 ```
 
 Would abort with the following log using, by default, `NSLog`:
 
-> Asserting failure: '1 > 2' in 'int main(int, char **)' on line Untitled.m:4. This is just a silly example or not
+> -[TPAppDelegate startLengthyOperation]: Assertion '(![NSThread isMainThread])' failed on line /Users/you/dev/Project/AppDelegate.m:56. This should not be running on the main thread.
 
 ## Log messages with CocoaLumberjack
 
