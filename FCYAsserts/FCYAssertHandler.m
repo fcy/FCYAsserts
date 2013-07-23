@@ -10,6 +10,14 @@
 #define FCYAssertLog NSLog
 #endif
 
+#ifdef NS_BLOCK_ASSERTIONS
+#define __FCYShouldAbort NO
+#else
+#define __FCYShouldAbort YES
+#endif
+
+
+NSString *const FCYAssertErrorDomain = @"FCYAssert";
 
 @implementation FCYAssertHandler {
 
@@ -25,15 +33,44 @@
 }
 
 - (void)assertFailureWithExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    [self _assertFailureShouldAbort:YES withExpression:expression function:function file:file line:line description:format arguments:args];
+    va_end(args);
+}
+
+- (void)assertFailureOrReturnWithExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    [self _assertFailureShouldAbort:__FCYShouldAbort withExpression:expression function:function file:file line:line description:format arguments:args];
+    va_end(args);
+}
+
+- (void)assertFailureOrReturnBlock:(FCYAssertReturnBlock)returnBlock withExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    NSString *logMessage = [self _assertFailureShouldAbort:__FCYShouldAbort withExpression:expression function:function file:file line:line description:format arguments:args];
+    va_end(args);
+
+    NSError *error = [NSError errorWithDomain:FCYAssertErrorDomain
+                                         code:0
+                                     userInfo:@{ NSLocalizedDescriptionKey : logMessage }];
+    returnBlock(error);
+}
+
+
+#pragma mark - Private Methods
+
+- (NSString *)_assertFailureShouldAbort:(BOOL)shouldAbort withExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)format arguments:(va_list)args {
     NSString *description = @"";
     if (format) {
-        va_list args;
-        va_start(args, format);
         description = [[NSString alloc] initWithFormat:format arguments:args];
-        va_end(args);
     }
-    FCYAssertLog(@"%@: Assertion '%@' failed on line %@:%ld. %@", function, expression, file, (long)line, description);
-    abort();
+    FCYAssertLog(@"%@: Assertion '%@' failed on line %@:%ld. %@", function, expression, file, (long) line, description);
+    if (shouldAbort) {
+        abort();
+    }
+    return [NSString stringWithFormat:@"%@: Assertion '%@' failed on line %@:%ld. %@", function, expression, file, (long) line, description];
 }
 
 @end

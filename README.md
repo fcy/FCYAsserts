@@ -3,13 +3,15 @@
 Inspired by [Friday Q&A 2013-05-03: Proper Use of Asserts][1] I made these macros
 to handle my assertions.
 
-**Be aware:** I don't disable the asserts in release code. I agree with Mike Ash
+**Be Aware:** I don't disable the asserts in release code. I agree with Mike Ash
 that if something is wrong it should break ASAP.
 
 ## Assert or Return
 
-Inspired by [Krzysztof Zabłocki blog post][3] macros of the family `FCYAssertOrReturn` does not
+Inspired by [Krzysztof Zabłocki blog post][3], macros of the family `FCYAssertOrReturn` does not
 crash the app in release builds only in debug. Why this? An app shouldn't crash because of an external change.
+
+**Important Note:** `FCYAssertOrReturn` uses `NS_BLOCK_ASSERTIONS` just like `NSAssert`.
 
 ## When Should I Use One Or The Other?
 
@@ -64,8 +66,9 @@ if (error) {
     completionBlock(nil, error);
 } else {
     FCYAssertOrReturnBlock([json isKindOfClass:[NSDictionary class]], ^(NSError *assertError){
-        json = [[NSDictionary alloc] init];
+        completionBlock(nil, assertError);
     }, @"Should have received a NSDictionary from the server. Got %@ instead.", [json class]);
+
     completionBlock(json, nil);
 }
 ```
