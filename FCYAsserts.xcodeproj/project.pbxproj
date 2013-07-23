@@ -31,6 +31,9 @@
 		B3D0470292BB029893C761FE /* FCYAsserts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYAsserts.h; sourceTree = "<group>"; };
 		B3D04E1AA7F8A2D34FB13225 /* libFCYAsserts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFCYAsserts.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D04FB973DA7C80682389B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA6D126B475716B343092AF6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		BA6D131BB93A1F272B4CCD8C /* FCYAsserts.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = FCYAsserts.podspec; sourceTree = "<group>"; };
+		BA6D1ABF4DF66839AE3C9ACB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,9 @@
 				B3D049346A753B33356D97E5 /* Products */,
 				B3D04845A5FF4FEF7BAF38B5 /* Frameworks */,
 				B3D04AF33A052B9D1813108D /* FCYAsserts */,
+				BA6D131BB93A1F272B4CCD8C /* FCYAsserts.podspec */,
+				BA6D126B475716B343092AF6 /* LICENSE.txt */,
+				BA6D1ABF4DF66839AE3C9ACB /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
