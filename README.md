@@ -65,9 +65,9 @@ id json = [NSJSONSerialization JSONObjectWithData:dataFromServer options:0 error
 if (error) {
     completionBlock(nil, error);
 } else {
-    FCYAssertOrReturnBlock([json isKindOfClass:[NSDictionary class]], ^(NSError *assertError){
+    FCYAssertOrReturnBlock([json isKindOfClass:[NSDictionary class]], @"Invalid Server Data", ^(NSError *assertError){
         completionBlock(nil, assertError);
-    }, @"Should have received a NSDictionary from the server. Got %@ instead.", [json class]);
+    });
 
     completionBlock(json, nil);
 }
@@ -75,7 +75,7 @@ if (error) {
 
 If json is not a NSDictionary in debug code it would abort and log and in release it would just log:
 
-> -[MyClass callServiceWithCompletionBlock:]: Assertion '[json isKindOfClass:[NSDictionary class]]' failed on line /Users/you/dev/Project/MyClass.m:42. Should have received a NSDictionary from the server. Got NSArray instead.
+> -[MyClass callServiceWithCompletionBlock:]: Assertion '[json isKindOfClass:[NSDictionary class]]' failed on line /Users/you/dev/Project/MyClass.m:42. Invalid Server Data
 
 ## Log messages with CocoaLumberjack
 

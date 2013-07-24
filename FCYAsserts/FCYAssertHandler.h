@@ -32,6 +32,6 @@ extern NSString *const FCYAssertErrorDomain;
                           function:(NSString *)function
                               file:(NSString *)file
                               line:(NSInteger)line
-                       description:(NSString *)format, ... NS_FORMAT_FUNCTION(6, 7);
+                       description:(NSString *)description;
 
 @end
