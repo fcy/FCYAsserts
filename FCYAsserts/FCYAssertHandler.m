@@ -46,15 +46,12 @@ NSString *const FCYAssertErrorDomain = @"FCYAssert";
     va_end(args);
 }
 
-- (void)assertFailureOrReturnBlock:(FCYAssertReturnBlock)returnBlock withExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)format, ... {
-    va_list args;
-    va_start(args, format);
-    NSString *logMessage = [self _assertFailureShouldAbort:__FCYShouldAbort withExpression:expression function:function file:file line:line description:format arguments:args];
-    va_end(args);
+- (void)assertFailureOrReturnBlock:(FCYAssertReturnBlock)returnBlock withExpression:(NSString *)expression function:(NSString *)function file:(NSString *)file line:(NSInteger)line description:(NSString *)description {
+    [self _assertFailureShouldAbort:__FCYShouldAbort withExpression:expression function:function file:file line:line description:description arguments:NULL];
 
     NSError *error = [NSError errorWithDomain:FCYAssertErrorDomain
                                          code:0
-                                     userInfo:@{ NSLocalizedDescriptionKey : logMessage }];
+                                     userInfo:@{ NSLocalizedDescriptionKey : description }];
     returnBlock(error);
 }
 
