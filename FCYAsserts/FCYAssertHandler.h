@@ -9,7 +9,7 @@
 typedef void(^FCYAssertReturnBlock)(NSError *);
 
 extern NSString *const FCYAssertErrorDomain;
-
+extern NSString *const FCYAssertExceptionName;
 
 @interface FCYAssertHandler : NSObject
 

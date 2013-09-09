@@ -7,12 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55ABDED817DE5B6B003E1C35 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40D9A0D179EF86500F202CA /* SenTestingKit.framework */; };
+		55ABDED917DE5B6B003E1C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40D9A0F179EF86500F202CA /* UIKit.framework */; };
+		55ABDEDA17DE5B6B003E1C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D04FB973DA7C80682389B2 /* Foundation.framework */; };
+		55ABDEE817DE5C4F003E1C35 /* FCYAssertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D041AAB15E0DBA4EB3AAE7 /* FCYAssertHandler.m */; };
+		55ABDEEA17DE5C6F003E1C35 /* FCYAsserts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3D0470292BB029893C761FE /* FCYAsserts.h */; };
+		55ABDEEB17DE5F87003E1C35 /* FCYAssertsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04027532B28C502BD03B0 /* FCYAssertsSpec.m */; };
+		82C351533762423780A45DD1 /* libPods-FCYAssertsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE9289856124C82B4E371E3 /* libPods-FCYAssertsTests.a */; };
 		B3D0490018265793BB9FB93B /* FCYAssertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D041AAB15E0DBA4EB3AAE7 /* FCYAssertHandler.m */; };
 		B3D049E42CD0E55C58021AB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D04FB973DA7C80682389B2 /* Foundation.framework */; };
 		B3D04E4902B1DA41CF3E0387 /* FCYAsserts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3D0470292BB029893C761FE /* FCYAsserts.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		55ABDEE917DE5C6A003E1C35 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				55ABDEEA17DE5C6F003E1C35 /* FCYAsserts.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3D0491932E6CE38358DA196 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -26,6 +43,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1AE9289856124C82B4E371E3 /* libPods-FCYAssertsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FCYAssertsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBDBC9F8FC846F1BB1B08C6 /* Pods-FCYAssertsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FCYAssertsTests.xcconfig"; path = "Pods/Pods-FCYAssertsTests.xcconfig"; sourceTree = "<group>"; };
+		55ABDED717DE5B6B003E1C35 /* FCYAssertsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCYAssertsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D04027532B28C502BD03B0 /* FCYAssertsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYAssertsSpec.m; sourceTree = "<group>"; };
 		B3D041AAB15E0DBA4EB3AAE7 /* FCYAssertHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYAssertHandler.m; sourceTree = "<group>"; };
 		B3D043E65D8DA862D7E23503 /* FCYAssertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYAssertHandler.h; sourceTree = "<group>"; };
 		B3D0470292BB029893C761FE /* FCYAsserts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYAsserts.h; sourceTree = "<group>"; };
@@ -39,6 +60,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		55ABDED317DE5B6B003E1C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55ABDED817DE5B6B003E1C35 /* SenTestingKit.framework in Frameworks */,
+				55ABDED917DE5B6B003E1C35 /* UIKit.framework in Frameworks */,
+				55ABDEDA17DE5B6B003E1C35 /* Foundation.framework in Frameworks */,
+				82C351533762423780A45DD1 /* libPods-FCYAssertsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3D0463DF8C89B02356B9F31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,15 +82,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55ABDEDB17DE5B6B003E1C35 /* FCYAssertsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3D04027532B28C502BD03B0 /* FCYAssertsSpec.m */,
+			);
+			path = FCYAssertsTests;
+			sourceTree = "<group>";
+		};
 		B3D047C4F68B01A158238117 = {
 			isa = PBXGroup;
 			children = (
-				B3D049346A753B33356D97E5 /* Products */,
-				B3D04845A5FF4FEF7BAF38B5 /* Frameworks */,
 				B3D04AF33A052B9D1813108D /* FCYAsserts */,
+				55ABDEDB17DE5B6B003E1C35 /* FCYAssertsTests */,
+				B3D04845A5FF4FEF7BAF38B5 /* Frameworks */,
+				B3D049346A753B33356D97E5 /* Products */,
 				BA6D131BB93A1F272B4CCD8C /* FCYAsserts.podspec */,
 				BA6D126B475716B343092AF6 /* LICENSE.txt */,
 				BA6D1ABF4DF66839AE3C9ACB /* README.md */,
+				1EBDBC9F8FC846F1BB1B08C6 /* Pods-FCYAssertsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +110,7 @@
 				B3D04FB973DA7C80682389B2 /* Foundation.framework */,
 				D40D9A0D179EF86500F202CA /* SenTestingKit.framework */,
 				D40D9A0F179EF86500F202CA /* UIKit.framework */,
+				1AE9289856124C82B4E371E3 /* libPods-FCYAssertsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D04E1AA7F8A2D34FB13225 /* libFCYAsserts.a */,
+				55ABDED717DE5B6B003E1C35 /* FCYAssertsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +137,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		55ABDED617DE5B6B003E1C35 /* FCYAssertsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55ABDEE717DE5B6B003E1C35 /* Build configuration list for PBXNativeTarget "FCYAssertsTests" */;
+			buildPhases = (
+				3D7AF9C99F1D48FB938FCFB3 /* Check Pods Manifest.lock */,
+				55ABDED217DE5B6B003E1C35 /* Sources */,
+				55ABDED317DE5B6B003E1C35 /* Frameworks */,
+				55ABDED417DE5B6B003E1C35 /* Resources */,
+				55ABDEE917DE5C6A003E1C35 /* CopyFiles */,
+				55ABDED517DE5B6B003E1C35 /* ShellScript */,
+				F8217D5286094C8FB0C4B401 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FCYAssertsTests;
+			productName = FCYAssertsTests;
+			productReference = 55ABDED717DE5B6B003E1C35 /* FCYAssertsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		B3D0436271D41C23F0993B9C /* FCYAsserts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3D0450A7686F598E4CB732B /* Build configuration list for PBXNativeTarget "FCYAsserts" */;
@@ -131,11 +196,77 @@
 			projectRoot = "";
 			targets = (
 				B3D0436271D41C23F0993B9C /* FCYAsserts */,
+				55ABDED617DE5B6B003E1C35 /* FCYAssertsTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		55ABDED417DE5B6B003E1C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D7AF9C99F1D48FB938FCFB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55ABDED517DE5B6B003E1C35 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		F8217D5286094C8FB0C4B401 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-FCYAssertsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		55ABDED217DE5B6B003E1C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55ABDEE817DE5C4F003E1C35 /* FCYAssertHandler.m in Sources */,
+				55ABDEEB17DE5F87003E1C35 /* FCYAssertsSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3D04451095C4D02FCEC87A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +278,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		55ABDEE517DE5B6B003E1C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBDBC9F8FC846F1BB1B08C6 /* Pods-FCYAssertsTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		55ABDEE617DE5B6B003E1C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBDBC9F8FC846F1BB1B08C6 /* Pods-FCYAssertsTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
 		B3D04459FE4F126E1B5EFA4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -225,6 +386,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		55ABDEE717DE5B6B003E1C35 /* Build configuration list for PBXNativeTarget "FCYAssertsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55ABDEE517DE5B6B003E1C35 /* Release */,
+				55ABDEE617DE5B6B003E1C35 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3D04485DD7B9D8014B8B91B /* Build configuration list for PBXProject "FCYAsserts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
