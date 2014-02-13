@@ -14,6 +14,7 @@
 		55ABDEEA17DE5C6F003E1C35 /* FCYAsserts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3D0470292BB029893C761FE /* FCYAsserts.h */; };
 		55ABDEEB17DE5F87003E1C35 /* FCYAssertsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04027532B28C502BD03B0 /* FCYAssertsSpec.m */; };
 		82C351533762423780A45DD1 /* libPods-FCYAssertsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE9289856124C82B4E371E3 /* libPods-FCYAssertsTests.a */; };
+		8CAD5C6118AD7B8600CFF77A /* FCYAssertsExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD5C6018AD7B7A00CFF77A /* FCYAssertsExamples.m */; };
 		B3D0490018265793BB9FB93B /* FCYAssertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D041AAB15E0DBA4EB3AAE7 /* FCYAssertHandler.m */; };
 		B3D049E42CD0E55C58021AB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D04FB973DA7C80682389B2 /* Foundation.framework */; };
 		B3D04E4902B1DA41CF3E0387 /* FCYAsserts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3D0470292BB029893C761FE /* FCYAsserts.h */; };
@@ -46,6 +47,8 @@
 		1AE9289856124C82B4E371E3 /* libPods-FCYAssertsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FCYAssertsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EBDBC9F8FC846F1BB1B08C6 /* Pods-FCYAssertsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FCYAssertsTests.xcconfig"; path = "Pods/Pods-FCYAssertsTests.xcconfig"; sourceTree = "<group>"; };
 		55ABDED717DE5B6B003E1C35 /* FCYAssertsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCYAssertsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CAD5C5F18AD7B7A00CFF77A /* FCYAssertsExamples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYAssertsExamples.h; sourceTree = "<group>"; };
+		8CAD5C6018AD7B7A00CFF77A /* FCYAssertsExamples.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYAssertsExamples.m; sourceTree = "<group>"; };
 		B3D04027532B28C502BD03B0 /* FCYAssertsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYAssertsSpec.m; sourceTree = "<group>"; };
 		B3D041AAB15E0DBA4EB3AAE7 /* FCYAssertHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYAssertHandler.m; sourceTree = "<group>"; };
 		B3D043E65D8DA862D7E23503 /* FCYAssertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYAssertHandler.h; sourceTree = "<group>"; };
@@ -90,9 +93,19 @@
 			path = FCYAssertsTests;
 			sourceTree = "<group>";
 		};
+		8CAD5C5E18AD7B7A00CFF77A /* FCYAssertsExamples */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD5C5F18AD7B7A00CFF77A /* FCYAssertsExamples.h */,
+				8CAD5C6018AD7B7A00CFF77A /* FCYAssertsExamples.m */,
+			);
+			path = FCYAssertsExamples;
+			sourceTree = "<group>";
+		};
 		B3D047C4F68B01A158238117 = {
 			isa = PBXGroup;
 			children = (
+				8CAD5C5E18AD7B7A00CFF77A /* FCYAssertsExamples */,
 				B3D04AF33A052B9D1813108D /* FCYAsserts */,
 				55ABDEDB17DE5B6B003E1C35 /* FCYAssertsTests */,
 				B3D04845A5FF4FEF7BAF38B5 /* Frameworks */,
@@ -272,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D0490018265793BB9FB93B /* FCYAssertHandler.m in Sources */,
+				8CAD5C6118AD7B8600CFF77A /* FCYAssertsExamples.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
