@@ -19,7 +19,7 @@ extern NSString *const FCYAssertExceptionName;
                            function:(NSString *)function
                                file:(NSString *)file
                                line:(NSInteger)line
-                        description:(NSString *)format, ... NS_FORMAT_FUNCTION(5, 6);
+                        description:(NSString *)format, ... NS_FORMAT_FUNCTION(5, 6) __attribute__((analyzer_noreturn));
 
 - (void)assertFailureOrReturnWithExpression:(NSString *)expression
                                    function:(NSString *)function
